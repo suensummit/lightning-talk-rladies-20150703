@@ -17,3 +17,14 @@ knit        : slidify::knit2slides
 
 ## MITx: 15.071x The Analytics Edge
 
+---
+
+## Linear Regression
+
+---
+
+## Moneyball
+
+
+
+
