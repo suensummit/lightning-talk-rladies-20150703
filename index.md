@@ -25,6 +25,7 @@ knit        : slidify::knit2slides
 
 ## Moneyball
 
+* Baseball
+* Basketball
 
-
-
+---
