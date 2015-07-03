@@ -10,7 +10,6 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
-
 ## RLadies Lightning Talk
 
 ### MITx: 15.071x The Analytics Edge
@@ -48,6 +47,17 @@ summary(model3)
 ## Linear Regression
 
 ```{r}
-model4 <- lm(Price ~ HarvestRain+ WinterRain, data = wine)
+model4 <- lm(Price ~ HarvestRain + WinterRain, data = wine)
 summary(model4)
 ```
+
+---
+
+## Linear Regression
+
+```{r}
+layout(matrix(c(1,2,3,4),2,2)) # optional 4 graphs/page
+plot(fit)
+```
+
+---

@@ -10,7 +10,6 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
-
 ## RLadies Lightning Talk
 
 ### MITx: 15.071x The Analytics Edge
@@ -127,7 +126,7 @@ summary(model3)
 
 
 ```r
-model4 <- lm(Price ~ HarvestRain+ WinterRain, data = wine)
+model4 <- lm(Price ~ HarvestRain + WinterRain, data = wine)
 summary(model4)
 ```
 
@@ -152,3 +151,19 @@ summary(model4)
 ## Multiple R-squared:  0.3177,	Adjusted R-squared:  0.2557 
 ## F-statistic: 5.122 on 2 and 22 DF,  p-value: 0.01492
 ```
+
+---
+
+## Linear Regression
+
+
+```r
+layout(matrix(c(1,2,3,4),2,2)) # optional 4 graphs/page
+plot(fit)
+```
+
+```
+## Error in plot(fit): object 'fit' not found
+```
+
+---
