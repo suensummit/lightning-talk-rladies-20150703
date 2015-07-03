@@ -21,11 +21,20 @@ knit        : slidify::knit2slides
 
 ## Linear Regression
 
+```{r}
+wine <- read.csv(file = "wine.csv", header = TRUE)
+model1 <- lm(Price ~ AGST + HarvestRain + Age + FrancePop + WinterRain, data = wine)
+summary(model1)
+```
+
 ---
 
-## Moneyball
+## Linear Regression
 
-* Baseball
-* Basketball
+```{r}
+model2 <- lm(Price ~ AGST + HarvestRain  + FrancePop + WinterRain, data = wine)
+summary(model2)
+model3 <- lm(Price ~ AGST + HarvestRain  + Age + WinterRain, data = wine)
+summary(model3)
+```
 
----

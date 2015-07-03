@@ -66,28 +66,100 @@
     <h2>Linear Regression</h2>
   </hgroup>
   <article data-timings="">
-    
+    <pre><code class="r">wine &lt;- read.csv(file = &quot;wine.csv&quot;, header = TRUE)
+model1 &lt;- lm(Price ~ AGST + HarvestRain + Age + FrancePop + WinterRain, data = wine)
+summary(model1)
+</code></pre>
+
+<pre><code>## 
+## Call:
+## lm(formula = Price ~ AGST + HarvestRain + Age + FrancePop + WinterRain, 
+##     data = wine)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.48179 -0.24662 -0.00726  0.22012  0.51987 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -4.504e-01  1.019e+01  -0.044 0.965202    
+## AGST         6.012e-01  1.030e-01   5.836 1.27e-05 ***
+## HarvestRain -3.958e-03  8.751e-04  -4.523 0.000233 ***
+## Age          5.847e-04  7.900e-02   0.007 0.994172    
+## FrancePop   -4.953e-05  1.667e-04  -0.297 0.769578    
+## WinterRain   1.043e-03  5.310e-04   1.963 0.064416 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.3019 on 19 degrees of freedom
+## Multiple R-squared:  0.8294, Adjusted R-squared:  0.7845 
+## F-statistic: 18.47 on 5 and 19 DF,  p-value: 1.044e-06
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Moneyball</h2>
+    <h2>Linear Regression</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>Baseball</li>
-<li>Basketball</li>
-</ul>
+    <pre><code class="r">model2 &lt;- lm(Price ~ AGST + HarvestRain  + FrancePop + WinterRain, data = wine)
+summary(model2)
+</code></pre>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<pre><code>## 
+## Call:
+## lm(formula = Price ~ AGST + HarvestRain + FrancePop + WinterRain, 
+##     data = wine)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.48252 -0.24636 -0.00699  0.22089  0.51949 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -3.768e-01  2.180e+00  -0.173 0.864529    
+## AGST         6.011e-01  9.898e-02   6.073 6.17e-06 ***
+## HarvestRain -3.958e-03  8.518e-04  -4.646 0.000156 ***
+## FrancePop   -5.075e-05  1.704e-05  -2.978 0.007434 ** 
+## WinterRain   1.042e-03  5.070e-04   2.055 0.053202 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.2943 on 20 degrees of freedom
+## Multiple R-squared:  0.8294, Adjusted R-squared:  0.7952 
+## F-statistic:  24.3 on 4 and 20 DF,  p-value: 1.945e-07
+</code></pre>
 
-<slide class="" id="slide-5" style="background:;">
-  <article data-timings="">
-    
+<pre><code class="r">model3 &lt;- lm(Price ~ AGST + HarvestRain  + Age + WinterRain, data = wine)
+summary(model3)
+</code></pre>
+
+<pre><code>## 
+## Call:
+## lm(formula = Price ~ AGST + HarvestRain + Age + WinterRain, data = wine)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.45470 -0.24273  0.00752  0.19773  0.53637 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -3.4299802  1.7658975  -1.942 0.066311 .  
+## AGST         0.6072093  0.0987022   6.152  5.2e-06 ***
+## HarvestRain -0.0039715  0.0008538  -4.652 0.000154 ***
+## Age          0.0239308  0.0080969   2.956 0.007819 ** 
+## WinterRain   0.0010755  0.0005073   2.120 0.046694 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.295 on 20 degrees of freedom
+## Multiple R-squared:  0.8286, Adjusted R-squared:  0.7943 
+## F-statistic: 24.17 on 4 and 20 DF,  p-value: 2.036e-07
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -116,14 +188,8 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Moneyball'>
+        data-slide=4 title='Linear Regression'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='NA'>
-         5
       </a>
     </li>
   </ul>
