@@ -45,3 +45,11 @@ model3 <- lm(Price ~ AGST + HarvestRain  + Age + WinterRain, data = wine)
 summary(model3)
 ```
 
+---
+
+## Linear Regression
+
+```{r}
+model4 <- lm(Price ~ HarvestRain+ WinterRain, data = wine)
+summary(model4)
+```

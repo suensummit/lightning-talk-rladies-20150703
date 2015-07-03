@@ -173,6 +173,40 @@ summary(model3)
   <!-- Presenter Notes -->
 </slide>
 
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Linear Regression</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">model4 &lt;- lm(Price ~ HarvestRain+ WinterRain, data = wine)
+summary(model4)
+</code></pre>
+
+<pre><code>## 
+## Call:
+## lm(formula = Price ~ HarvestRain + WinterRain, data = wine)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.0933 -0.3222 -0.1012  0.3871  1.1877 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  7.865e+00  6.616e-01  11.888 4.76e-11 ***
+## HarvestRain -4.971e-03  1.601e-03  -3.105  0.00516 ** 
+## WinterRain  -9.848e-05  9.007e-04  -0.109  0.91392    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.5611 on 22 degrees of freedom
+## Multiple R-squared:  0.3177, Adjusted R-squared:  0.2557 
+## F-statistic: 5.122 on 2 and 22 DF,  p-value: 0.01492
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
     <slide class="backdrop"></slide>
   </slides>
   <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
@@ -205,6 +239,12 @@ summary(model3)
       <a href="#" target="_self" rel='tooltip' 
         data-slide=5 title='Linear Regression'>
          5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Linear Regression'>
+         6
       </a>
     </li>
   </ul>
