@@ -13,9 +13,7 @@ knit        : slidify::knit2slides
 
 ## RLadies Lightning Talk
 
----
-
-## MITx: 15.071x The Analytics Edge
+### MITx: 15.071x The Analytics Edge
 
 ---
 
