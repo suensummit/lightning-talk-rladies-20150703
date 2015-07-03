@@ -10,9 +10,8 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
-## RLadies Lightning Talk
 
-### MITx: 15.071x The Analytics Edge
+![](https://www.ocf.berkeley.edu/~superb/pics/moneyball.jpg)
 
 ---
 
