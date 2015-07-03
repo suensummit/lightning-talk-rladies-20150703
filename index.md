@@ -89,6 +89,11 @@ summary(model2)
 ## F-statistic:  24.3 on 4 and 20 DF,  p-value: 1.945e-07
 ```
 
+---
+
+## Linear Regression
+
+
 ```r
 model3 <- lm(Price ~ AGST + HarvestRain  + Age + WinterRain, data = wine)
 summary(model3)
