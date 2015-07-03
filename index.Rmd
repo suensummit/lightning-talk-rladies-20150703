@@ -29,7 +29,7 @@ summary(model1)
 ## Linear Regression
 
 ```{r}
-model2 <- lm(Price ~ AGST + HarvestRain  + FrancePop + WinterRain, data = wine)
+model2 <- lm(Price ~ AGST + HarvestRain + FrancePop + WinterRain, data = wine)
 summary(model2)
 ```
 
@@ -38,7 +38,7 @@ summary(model2)
 ## Linear Regression
 
 ```{r}
-model3 <- lm(Price ~ AGST + HarvestRain  + Age + WinterRain, data = wine)
+model3 <- lm(Price ~ AGST + HarvestRain + Age + WinterRain, data = wine)
 summary(model3)
 ```
 
@@ -47,8 +47,8 @@ summary(model3)
 ## Linear Regression
 
 ```{r}
-model4 <- lm(Price ~ HarvestRain + WinterRain, data = wine)
-summary(model4)
+layout(matrix(c(1,2,3,4),2,2)) # optional 4 graphs/page
+plot(model1)
 ```
 
 ---
@@ -56,8 +56,11 @@ summary(model4)
 ## Linear Regression
 
 ```{r}
-layout(matrix(c(1,2,3,4),2,2)) # optional 4 graphs/page
-plot(fit)
+coefficients(model1) # model coefficients
+confint(model1, level=0.95) # CIs for model parameters
+fitted(model1) # predicted values
+residuals(model1) # residuals
+anova(model1) # anova table
+vcov(model1) # covariance matrix for model parameters
+influence(model1) # regression diagnostics 
 ```
-
----
